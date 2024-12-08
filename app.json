@@ -2,37 +2,27 @@
   "expo": {
     "name": "Educatronicapp",
     "slug": "Educatronicapp",
-    "version": "2.5.5",
+    "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/Images/iconEdu.png",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "newArchEnabled": true,
     "splash": {
-      "image": "./assets/Images/splash.png",
+      "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#f0f8ff"
+      "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
     "ios": {
-      "supportsTablet": true,
-      "keyboardDismissMode": "none"
+      "supportsTablet": true
     },
     "android": {
-      "softwareKeyboardLayoutMode": "pan",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/Images/iconEdu.png",
-        "backgroundColor": "#f0f8ff"
-      },
-      "package": "com.edgarhdz17.Educatronicapp"
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "a9ba1ef1-463d-4707-bcb5-324ae088a57a"
-      }
     }
   }
 }
