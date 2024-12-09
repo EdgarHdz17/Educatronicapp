@@ -28,6 +28,11 @@ const CodingScreen = () => {
           placeholder="Nombra tu programa aquí"
         ></TextInput>
       </View>
+      <View style={stylesCoding.statusTextContainer}>
+        <Text>{resultVerific}</Text>
+        <Text>{result}</Text>
+        <Text>{isValid ? "Comando valido" : "Comando invalido"}</Text>
+      </View>
       <View style={stylesCoding.bottomContainer}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <View style={stylesCoding.containerButtons}>
@@ -46,14 +51,7 @@ const CodingScreen = () => {
           </View>
         </ScrollView>
         <View style={stylesCoding.containerCode}>
-          <Text>{resultVerific}</Text>
-          <Text>{result}</Text>
-          <Text>
-            {isValidCoding
-              ? "La compilación es posible "
-              : "La compilación aun es imposible"}
-          </Text>
-          <Button
+          {/* <Button
             title="Compilar"
             onPress={() =>
               handleCompilerProgram(
@@ -64,7 +62,7 @@ const CodingScreen = () => {
                 code
               )
             }
-          />
+          /> */}
           <TextInput
             onChangeText={(text) => {
               setCode(text);

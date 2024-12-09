@@ -12,6 +12,11 @@ const stylesCoding = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  statusTextContainer: {
+    height: 50,
+    justifyContent: "center",
+    alignItems: "center",
+  },
   bottomContainer: {
     flex: 1,
     flexDirection: "row",

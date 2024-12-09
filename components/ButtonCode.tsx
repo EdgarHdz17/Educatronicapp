@@ -3,10 +3,12 @@ import React from "react";
 import ButtonTypes from "../utils/ButtonTypes";
 import stylesButtonCode from "../styles/components/ButtonCodeStyles";
 import {
+  FontAwesome,
   FontAwesome5,
   FontAwesome6,
   Ionicons,
   MaterialCommunityIcons,
+  AntDesign,
 } from "@expo/vector-icons";
 
 const ButtonCode: React.FC<ButtonTypes> = ({ text, icon, iconType }) => {
@@ -40,6 +42,22 @@ const ButtonCode: React.FC<ButtonTypes> = ({ text, icon, iconType }) => {
         return (
           <FontAwesome6
             name={icon as keyof typeof FontAwesome6.glyphMap}
+            size={24}
+            color="black"
+          />
+        );
+      case "AntDesign":
+        return (
+          <AntDesign
+            name={icon as keyof typeof AntDesign.glyphMap}
+            size={24}
+            color="black"
+          />
+        );
+      case "FontAwesome":
+        return (
+          <FontAwesome
+            name={icon as keyof typeof FontAwesome.glyphMap}
             size={24}
             color="black"
           />

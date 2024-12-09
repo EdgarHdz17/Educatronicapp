@@ -6,7 +6,7 @@ const IconsButtons: ButtonTypes[] = [
   { icon: "file-upload", text: "Cargar Programa", iconType: "FontAwesome5" },
   { icon: "trash", text: "Borrar", iconType: "FontAwesome6" },
   { icon: "gamepad", text: "Ver simulación", iconType: "FontAwesome5" },
-  { icon: "question-circle", text: "Ayuda", iconType: "AntDesign" },
+  { icon: "question-circle", text: "Ayuda", iconType: "FontAwesome" },
 ];
 
 export default IconsButtons;

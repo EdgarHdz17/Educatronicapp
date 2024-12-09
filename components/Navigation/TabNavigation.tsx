@@ -35,6 +35,8 @@ export default function TabNavigator() {
               return <Ionicons name={iconName} size={size} color={iconColor} />;
             }
           },
+          tabBarActiveTintColor: GlobalColors.primary,
+          tabBarInactiveTintColor: GlobalColors.gray,
         })}
       >
         <Tab.Screen
