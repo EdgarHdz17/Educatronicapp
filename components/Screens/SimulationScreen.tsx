@@ -5,13 +5,15 @@ import ThreeExample from "../ThreeExample";
 import Animation from "../Animation";
 import ButtonControl from "../ButtonControl";
 import IconsControls from "../../constants/IconsControls";
+import RecordAudio from "../RecordAudio";
 
 type Props = {};
 
 const SimulationScreen = (props: Props) => {
   return (
     <View style={stylesSimulation.container}>
-      <View style={stylesSimulation.simulationContainer}></View>
+      {/* <View style={stylesSimulation.simulationContainer}></View> */}
+      <RecordAudio />
       <View style={stylesSimulation.controlContainer}>
         {IconsControls.map((icon, index) => (
           <ButtonControl

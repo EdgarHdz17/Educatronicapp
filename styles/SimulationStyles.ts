@@ -3,6 +3,7 @@ import { StyleSheet } from "react-native";
 const stylesSimulation = StyleSheet.create({
   container: {
     flex: 1,
+    marginVertical: 5,
   },
   controlContainer: {
     flex: 1,

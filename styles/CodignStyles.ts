@@ -43,7 +43,7 @@ const stylesCoding = StyleSheet.create({
     borderWidth: 2,
   },
   inputCode: {
-    height: "80%",
+    height: "100%",
     width: "100%",
     backgroundColor: GlobalColors.white,
     borderRadius: 10,
@@ -53,8 +53,8 @@ const stylesCoding = StyleSheet.create({
   },
   pickerButton: {
     height: 80,
-    width: "70%",
-    backgroundColor: "#56D0F6",
+    width: 100,
+    backgroundColor: "red",
     flexDirection: "column",
     justifyContent: "center",
     gap: 5,

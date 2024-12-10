@@ -5,7 +5,7 @@ const stylesPicker = StyleSheet.create({
   container: {
     height: 80,
     width: "70%",
-    backgroundColor: GlobalColors.primary,
+    // backgroundColor: GlobalColors.primary,
     flexDirection: "column",
     justifyContent: "center",
     gap: 5,
@@ -16,13 +16,13 @@ const stylesPicker = StyleSheet.create({
     fontSize: 20,
     textAlign: "center",
     justifyContent: "center",
-    color: "white",
+    color: "black",
     fontWeight: "bold",
   },
   floorText: {
     textAlign: "center",
     fontSize: 12,
-    color: GlobalColors.white,
+    // color: GlobalColors.white,
     fontWeight: "600",
   },
 });
