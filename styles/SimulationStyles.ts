@@ -16,6 +16,9 @@ const stylesSimulation = StyleSheet.create({
   },
   simulationContainer: {
     flex: 10,
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: 20,
   },
 });
 

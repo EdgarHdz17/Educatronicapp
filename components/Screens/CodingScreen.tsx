@@ -14,7 +14,7 @@ const CodingScreen = () => {
   const [code, setCode] = useState("");
   const [result, setResult] = useState("Ingresa tus comandos");
   const [resultVerific, setResultVerific] = useState("Comienza tu programa");
-  const [isValid, setIsValid] = useState(false);
+  const [isValid, setIsValid] = useState();
   const [isValidCoding, setIsValidCoding] = useState(false);
   const [selectedFloor, setSelectedFloor] = useState(1);
 
@@ -51,7 +51,7 @@ const CodingScreen = () => {
           </View>
         </ScrollView>
         <View style={stylesCoding.containerCode}>
-          {/* <Button
+          <Button
             title="Compilar"
             onPress={() =>
               handleCompilerProgram(
@@ -62,7 +62,7 @@ const CodingScreen = () => {
                 code
               )
             }
-          /> */}
+          />
           <TextInput
             onChangeText={(text) => {
               setCode(text);
