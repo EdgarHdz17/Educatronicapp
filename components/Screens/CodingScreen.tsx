@@ -7,6 +7,7 @@ import checkAutomatonCoding from "../../funtions/handleProgramCode";
 import checkAutomatonComand from "../../funtions/handleSingleComand";
 import PickerFloor from "../PickerFloor";
 import handleCompilerProgram from "../../funtions/handleCompilerProgram";
+import handleSaveProgram from "../../funtions/handleSaveProgram";
 
 const CodingScreen = () => {
   const [nameProgram, setNameProgram] = useState("");
@@ -16,6 +17,8 @@ const CodingScreen = () => {
   const [isValid, setIsValid] = useState();
   const [isValidCoding, setIsValidCoding] = useState(false);
   const [selectedFloor, setSelectedFloor] = useState(1);
+  const [programsSaveds, setProgramsSaveds] = useState([]);
+  const [programSelect, setProgramSelect] = useState(null);
 
   return (
     <View style={stylesCoding.container}>
@@ -43,16 +46,24 @@ const CodingScreen = () => {
               icon="play-circle"
               textButton="Compilar"
               iconType={"FontAwesome5"}
-              onPress={() => {
-                console.log("Compilando");
-              }}
+              onPress={() =>
+                handleCompilerProgram(
+                  selectedFloor,
+                  setSelectedFloor,
+                  nameProgram,
+                  isValidCoding,
+                  code
+                )
+              }
             />
             <ButtonCode
               icon="usb-port"
               textButton="Guardar"
               iconType={"MaterialCommunityIcons"}
               onPress={() => {
-                console.log("Compilando");
+                handleSaveProgram(nameProgram, code, [], () =>
+                  console.log("Programa guardado")
+                );
               }}
             />
             <ButtonCode
@@ -98,18 +109,6 @@ const CodingScreen = () => {
           </View>
         </ScrollView>
         <View style={stylesCoding.containerCode}>
-          <Button
-            title="Compilar"
-            onPress={() =>
-              handleCompilerProgram(
-                selectedFloor,
-                setSelectedFloor,
-                nameProgram,
-                isValidCoding,
-                code
-              )
-            }
-          />
           <TextInput
             onChangeText={(text) => {
               setCode(text);
