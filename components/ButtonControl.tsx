@@ -1,6 +1,6 @@
-import { Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
 import React from "react";
-import ButtonTypes from "../utils/ButtonTypes";
+import stylesButtonControl from "../styles/components/ButtonControlStyles";
 import {
   FontAwesome,
   FontAwesome5,
@@ -9,24 +9,23 @@ import {
   MaterialCommunityIcons,
   AntDesign,
 } from "@expo/vector-icons";
-import stylesButtonControl from "../styles/components/ButtonControlStyles";
+import IconSourceType from "../utils/ButtonTypes";
 
-const ButtonControl: React.FC<ButtonTypes> = ({
-  text,
+interface ButtonControlProps {
+  icon: string;
+  iconType: IconSourceType;
+  textButton: string;
+  onPress: () => void;
+}
+
+const ButtonControl: React.FC<ButtonControlProps> = ({
   icon,
   iconType,
-  action,
+  textButton,
+  onPress,
 }) => {
   const renderIcon = () => {
     switch (iconType) {
-      case "FontAwesome":
-        return (
-          <FontAwesome5
-            name={icon as keyof typeof FontAwesome5.glyphMap}
-            size={24}
-            color="black"
-          />
-        );
       case "FontAwesome5":
         return (
           <FontAwesome5
@@ -67,15 +66,23 @@ const ButtonControl: React.FC<ButtonTypes> = ({
             color="black"
           />
         );
+      case "FontAwesome":
+        return (
+          <FontAwesome
+            name={icon as keyof typeof FontAwesome.glyphMap}
+            size={24}
+            color="black"
+          />
+        );
       default:
         return null;
     }
   };
 
   return (
-    <TouchableOpacity style={stylesButtonControl.container} onPress={action}>
+    <TouchableOpacity onPress={onPress} style={stylesButtonControl.container}>
       {renderIcon()}
-      <Text style={stylesButtonControl.textButton}>{text}</Text>
+      <Text style={stylesButtonControl.textButton}>{textButton}</Text>
     </TouchableOpacity>
   );
 };

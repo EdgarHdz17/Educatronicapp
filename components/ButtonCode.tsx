@@ -1,6 +1,5 @@
-import { Text, View } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
 import React from "react";
-import ButtonTypes from "../utils/ButtonTypes";
 import stylesButtonCode from "../styles/components/ButtonCodeStyles";
 import {
   FontAwesome,
@@ -10,8 +9,21 @@ import {
   MaterialCommunityIcons,
   AntDesign,
 } from "@expo/vector-icons";
+import IconSourceType from "../utils/ButtonTypes";
 
-const ButtonCode: React.FC<ButtonTypes> = ({ text, icon, iconType }) => {
+interface ButtonControlProps {
+  icon: string;
+  iconType: IconSourceType;
+  textButton: string;
+  onPress: () => void;
+}
+
+const ButtonCode: React.FC<ButtonControlProps> = ({
+  icon,
+  iconType,
+  textButton,
+  onPress,
+}) => {
   const renderIcon = () => {
     switch (iconType) {
       case "FontAwesome5":
@@ -68,10 +80,10 @@ const ButtonCode: React.FC<ButtonTypes> = ({ text, icon, iconType }) => {
   };
 
   return (
-    <View style={stylesButtonCode.container}>
+    <TouchableOpacity onPress={onPress} style={stylesButtonCode.container}>
       {renderIcon()}
-      <Text style={stylesButtonCode.textButton}>{text}</Text>
-    </View>
+      <Text style={stylesButtonCode.textButton}>{textButton}</Text>
+    </TouchableOpacity>
   );
 };
 

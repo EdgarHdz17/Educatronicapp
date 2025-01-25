@@ -3,7 +3,8 @@ import { GlobalColors } from "../GlobalColors";
 
 const stylesModalInfo = StyleSheet.create({
   modalView: {
-    margin: 20,
+    marginTop: 150,
+    marginHorizontal: 20,
     backgroundColor: "#f0f8ff",
     borderRadius: 20,
     padding: 35,
@@ -25,17 +26,6 @@ const stylesModalInfo = StyleSheet.create({
     textAlign: "center",
   },
   buttonCloseModal: {
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  recordButtonContainer: {
-    position: "absolute",
-    bottom: 16,
-    right: 16,
-    backgroundColor: "#00bfff",
-    borderRadius: 30,
-    width: 60,
-    height: 60,
     justifyContent: "center",
     alignItems: "center",
   },

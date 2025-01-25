@@ -16,11 +16,12 @@ const stylesHome = StyleSheet.create({
     backgroundColor: GlobalColors.secondary,
   },
   titleContainer: {
-    justifyContent: "center",
+    justifyContent: "space-around",
     alignItems: "center",
     width: "100%",
     padding: 10,
     backgroundColor: GlobalColors.primary,
+    flexDirection: "row",
   },
   titleText: {
     fontSize: 30,

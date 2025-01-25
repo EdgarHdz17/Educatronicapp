@@ -5,7 +5,6 @@ import ButtonCode from "../ButtonCode";
 import { handleNameProgram } from "../../funtions/handleNameProgram";
 import checkAutomatonCoding from "../../funtions/handleProgramCode";
 import checkAutomatonComand from "../../funtions/handleSingleComand";
-import IconsButtons from "../../constants/IconsButtons";
 import PickerFloor from "../PickerFloor";
 import handleCompilerProgram from "../../funtions/handleCompilerProgram";
 
@@ -40,14 +39,62 @@ const CodingScreen = () => {
               selectedFloor={selectedFloor}
               setSelectedFloor={setSelectedFloor}
             />
-            {IconsButtons.map((button, index) => (
-              <ButtonCode
-                key={index}
-                text={button.text}
-                icon={button.icon}
-                iconType={button.iconType}
-              />
-            ))}
+            <ButtonCode
+              icon="play-circle"
+              textButton="Compilar"
+              iconType={"FontAwesome5"}
+              onPress={() => {
+                console.log("Compilando");
+              }}
+            />
+            <ButtonCode
+              icon="usb-port"
+              textButton="Guardar"
+              iconType={"MaterialCommunityIcons"}
+              onPress={() => {
+                console.log("Compilando");
+              }}
+            />
+            <ButtonCode
+              icon="file-upload"
+              textButton="Cargar"
+              iconType={"FontAwesome5"}
+              onPress={() => {
+                console.log("Compilando");
+              }}
+            />
+            <ButtonCode
+              icon="trash"
+              textButton="Borrar"
+              iconType={"FontAwesome6"}
+              onPress={() => {
+                console.log("Compilando");
+              }}
+            />
+            <ButtonCode
+              icon="play-circle"
+              textButton="Compilar"
+              iconType={"FontAwesome5"}
+              onPress={() => {
+                console.log("Compilando");
+              }}
+            />
+            <ButtonCode
+              icon="gamepad"
+              textButton="ver simulación"
+              iconType={"FontAwesome5"}
+              onPress={() => {
+                console.log("Compilando");
+              }}
+            />
+            <ButtonCode
+              icon="question-circle"
+              textButton="Ayuda"
+              iconType={"FontAwesome"}
+              onPress={() => {
+                console.log("Compilando");
+              }}
+            />
           </View>
         </ScrollView>
         <View style={stylesCoding.containerCode}>

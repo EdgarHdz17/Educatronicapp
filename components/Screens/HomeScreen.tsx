@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import stylesHome from "../../styles/HomeStyles";
 import LottieView from "lottie-react-native";
 import ModalInfo from "../ModalInfo";
+import Entypo from "@expo/vector-icons/Entypo";
 
 const HomeScreen = () => {
   const [modalInfo, setModalInfo] = useState(false);
@@ -16,7 +17,9 @@ const HomeScreen = () => {
       <View style={stylesHome.innerContainer}>
         <View style={stylesHome.titleContainer}>
           <Text style={stylesHome.titleText}>EDUCATRONICAPP</Text>
-          <Button title="Info" onPress={handleModalInfo} />
+          <TouchableOpacity onPress={handleModalInfo}>
+            <Entypo name="info-with-circle" size={30} color="black" />
+          </TouchableOpacity>
         </View>
         <View style={stylesHome.lottieContainer}>
           <TouchableOpacity>
